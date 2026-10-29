@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  parser:
+    build: .
+    image: google-maps-parser:latest
+    volumes:
+      - ./output:/output
+      - ./parser.py:/app/parser.py
+    stdin_open: true
+    tty: true
